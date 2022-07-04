@@ -1,0 +1,127 @@
+INSERT INTO StaffMember VALUES(3001,'12345','John','21 ABC St, NC 27','9391234567','M',36,'Editor','2020-01-01');
+<EOQ>
+INSERT INTO StaffMember VALUES(3002,'12346','Ethen','21 ABC St, NC 27606','9491234567','M',30,'Editor','2020-01-01');
+<EOQ>
+INSERT INTO StaffMember VALUES(3003,'12347','Cathy','3300 AAA St, NC 27606','9591234567','F',28,'Author','2020-01-01');
+<EOQ>
+
+
+INSERT INTO Editor VALUES(3001,'Permanent');
+<EOQ>
+INSERT INTO Editor VALUES(3002,'Permanent');
+<EOQ>
+INSERT INTO Author VALUES(3003,'Invited');
+<EOQ>
+
+
+INSERT INTO Publication VALUES(1001,'Introduction to database','Book','Technology',20);
+<EOQ>
+INSERT INTO Publication VALUES(1002,'Healthy Diet','Magazine','Health',10);
+<EOQ>
+INSERT INTO Publication VALUES(1003,'Animal Science','Journal','Science',10);
+<EOQ>
+
+
+INSERT INTO Issues VALUES(1002,1,'Magazine','2020-02-24','Weekly','Lorem Ipsum Valor');
+<EOQ>
+INSERT INTO Issues VALUES(1003,2,'Journal','2020-03-01','Monthly','Lorem Ipsum Valor');
+<EOQ>
+
+
+INSERT INTO Articles VALUES(1002,1,'Article-1','ABC','2020-02-24');
+<EOQ>
+INSERT INTO Articles VALUES(1002,2,'Article-2','DEF','2020-02-24');
+<EOQ>
+
+
+INSERT INTO Articles VALUES(1003,1,'Article-1','AAA','2020-03-01');
+<EOQ>
+INSERT INTO Articles VALUES(1003,2,'Article-2','BBB','2020-03-01');
+<EOQ>
+
+
+INSERT INTO Books VALUES(1001,12345,'2ed','2018-10-10','2018-01-01','Lorem Ipsum Valor');
+<EOQ>
+
+
+INSERT INTO Chapter VALUES(1001,1,"Into the woods","Lorem ipsum valor");
+<EOQ>
+INSERT INTO Chapter VALUES(1001,2,"Into the Forest","ipsum valor");
+<EOQ>
+
+
+INSERT INTO Pens VALUES(3003,1001);
+<EOQ>
+
+
+INSERT INTO Writes VALUES(3003,1,1002);
+<EOQ>
+INSERT INTO Writes VALUES(3003,2,1003);
+<EOQ>
+
+
+INSERT INTO Edits VALUES(3001,1001);
+<EOQ>
+INSERT INTO Edits VALUES(3002,1002);
+<EOQ>
+
+INSERT INTO Transactions VALUES(5100,"2020-01-02",600,"Credit","Cash","Distributor");
+<EOQ>
+INSERT INTO Transactions VALUES(5101,"2020-01-15",30,"Debit","Cheque","Shipping Cost");
+<EOQ>
+INSERT INTO Transactions VALUES(5102,"2020-02-10",100,"Credit","DebitCard","Distributor");
+<EOQ>
+INSERT INTO Transactions VALUES(5103,"2020-02-15",15,"Debit","Cheque","Shipping Cost");
+<EOQ>
+INSERT INTO Transactions VALUES(5104,"2020-02-25",15,"Debit","Cheque","Shipping Cost");
+<EOQ>
+INSERT INTO Transactions VALUES(5105,"2020-04-01",1000,"Debit","PayCheck","Salary");
+<EOQ>
+INSERT INTO Transactions VALUES(5106,"2020-04-01",1000,"Debit","PayCheck","Salary");
+<EOQ>
+INSERT INTO Transactions VALUES(5107,"2020-04-01",1200,"Debit","PayCheck","Salary");
+<EOQ>
+
+
+INSERT INTO Distributor VALUES(2001,8001,"BookSell",200,"Book Store","2200, A Street, NC","Charlotte","Wake","Jason","9191234567");
+<EOQ>
+INSERT INTO Distributor VALUES(2002,8002,"BookDist",0,"Wholesaler","2200, B Street, NC","Raleigh","Wake","Alex","9291234568");
+<EOQ>
+
+
+INSERT INTO Orders VALUES(4001,2001,"2020-01-02",600,"2020-01-15",30);
+<EOQ>
+INSERT INTO Orders VALUES(4002,2001,"2020-02-05",200,"2020-02-15",15);
+<EOQ>
+INSERT INTO Orders VALUES(4003,2002,"2020-02-10",100,"2020-02-25",15);
+<EOQ>
+
+
+INSERT INTO GetsPaid VALUES(5105,3001,"Permanent");
+<EOQ>
+INSERT INTO GetsPaid VALUES(5106,3002,"Permanent");
+<EOQ>
+INSERT INTO GetsPaid VALUES(5107,3003,"Invited");
+<EOQ>
+
+
+INSERT INTO MadeBy VALUES(5100,2001);
+<EOQ>
+INSERT INTO MadeBy VALUES(5102,2002);
+<EOQ>
+
+
+INSERT INTO MadeFor VALUES(5101,4001);
+<EOQ>
+INSERT INTO MadeFor VALUES(5103,4002);
+<EOQ>
+INSERT INTO MadeFor VALUES(5104,4003);
+<EOQ>
+
+
+INSERT INTO Has VALUES(1001,4001,30,20);
+<EOQ>
+INSERT INTO Has VALUES(1001,4002,10,20);
+<EOQ>
+INSERT INTO Has VALUES(1003,4003,10,10);
+<EOQ>

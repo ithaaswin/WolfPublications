@@ -1,0 +1,426 @@
+INSERT INTO StaffMember VALUES(1,1,"Aswin","4206 Whistler Ct, Raleigh",9842708890,"Male",16,"Author","2020-11-02");
+ <EOQ>
+INSERT INTO StaffMember VALUES(2,2,"Ishwari","4206 Whistler Ct, Raleigh",9842708891,"Female",16,"Editor","2020-12-02")
+<EOQ>
+INSERT INTO StaffMember VALUES(3,3,"Mohan","4206 Whistler Ct, Raleigh",9842708892,"Male",16,"Editor","2020-11-11");
+ <EOQ>
+
+INSERT INTO StaffMember VALUES(4,4,"Vamsi","4206 Whistler Ct, Raleigh",9842708893,"Male",16,"Admin","2020-11-02");
+ <EOQ>
+
+INSERT INTO StaffMember VALUES(5,5,"Kumar","4206 Whistler Ct, Raleigh",9842708894,"Male",25,"Billing","2020-11-02");
+ <EOQ>
+
+INSERT INTO StaffMember VALUES(6,6,"Zare","4206 Whistler Ct, Raleigh",9842708895,"Female",16,"Admin","2020-11-30");
+ <EOQ>
+
+INSERT INTO StaffMember VALUES(7,7,"Madhur","2510 Avent Ferry Rd, Cary",9842708896,"Male",16,"Sales","2021-11-02");
+ <EOQ>
+
+INSERT INTO StaffMember VALUES(8,8,"Itha","4206 Whistler Ct, Raleigh",9842708897,"Male",16,"HR","2020-10-02");
+ <EOQ>
+
+INSERT INTO StaffMember VALUES(9,9,"Varada","4206 Whistler Ct, Raleigh",9842708898,"Male",16,"Editor","2019-11-02");
+ <EOQ>
+
+INSERT INTO StaffMember VALUES(10,10,"Kanakapura","4206 Whistler Ct, Raleigh",9842708899,"Male",16,"Admin","2016-11-02");
+ <EOQ>
+
+INSERT INTO StaffMember VALUES(11,11,"Shekhar","4206 Whistler Ct, Raleigh",9842448890,"Male",16,"Author","2020-03-02");
+ <EOQ>
+
+INSERT INTO Author VALUES(1,"Permanent");
+ <EOQ>
+
+INSERT INTO Author VALUES(11,"Invited");
+ <EOQ>
+
+
+
+INSERT INTO Editor VALUES(2,"Invited");
+ <EOQ>
+
+INSERT INTO Editor VALUES(3,"Permanent");
+ <EOQ>
+
+INSERT INTO Editor VALUES(9,"Permanent");
+ <EOQ>
+
+
+INSERT INTO Publication VALUES(101,"Gone With Wind","Book","Love Story",10);
+ <EOQ>
+
+INSERT INTO Publication VALUES(102,"IEEE","Journal","Science and Technology",15);
+ <EOQ>
+
+INSERT INTO Publication VALUES(103,"Angels and Demons","Book","Fiction",100);
+ <EOQ>
+
+INSERT INTO Publication VALUES(104,"AutoCar","Magazine","Automotives",25.5);
+ <EOQ>
+
+INSERT INTO Publication VALUES(105,"Family Circle","Magazine","Lifestyle",79);
+ <EOQ>
+
+INSERT INTO Publication VALUES(106,"Wolf of WallStreet","Journal","Stock Market",12);
+ <EOQ>
+
+INSERT INTO Publication VALUES(107,"Immortals of Meluha","Book","Mythological",33);
+ <EOQ>
+
+
+
+INSERT INTO Issues VALUES(102,1211,"Journal","2011-05-02","Monthly","First Line Second Line");
+ <EOQ>
+
+INSERT INTO Issues VALUES(104,1212,"Magazine","2020-07-23","Annual","One Line Two Line");
+ <EOQ>
+
+INSERT INTO Issues VALUES(105,1213,"Magazine","2000-05-14","Monthly","1 Line 2Line");
+ <EOQ>
+
+INSERT INTO Issues VALUES(106,1214,"Journal","1990-01-01","Annual","I Line II Line");
+ <EOQ>
+
+
+
+INSERT INTO Articles VALUES(102,1501,"Snake Species","Lorem Ipsum","2020-03-09");
+ <EOQ>
+
+INSERT INTO Articles VALUES(102,1502,"Radio Activity effect on snakes","Valor","2020-03-09");
+ <EOQ>
+
+INSERT INTO Articles VALUES(102,1503,"Life of Snakes","Death of snake","2020-03-09");
+ <EOQ>
+
+INSERT INTO Articles VALUES(104,1501,"Speed thrills","But Kills","2012-07-15");
+ <EOQ>
+
+INSERT INTO Articles VALUES(104,1502,"Road Rage","Be soft on my Curves","2012-07-15");
+ <EOQ>
+
+INSERT INTO Articles VALUES(104,1503,"Fast and Furious","Tokyo Drift","2012-07-15");
+ <EOQ>
+
+INSERT INTO Articles VALUES(105,1502,"Fat and Curious","Obesity","2019-08-25");
+ <EOQ>
+
+INSERT INTO Articles VALUES(105,1503,"Hit the Gym","Be healthy","2019-08-25");
+ <EOQ>
+
+INSERT INTO Articles VALUES(105,1504,"Spa","Sona","2019-08-25");
+ <EOQ>
+
+INSERT INTO Articles VALUES(106,1504,"Dalal Street","Ka dariya","2009-02-12");
+ <EOQ>
+
+INSERT INTO Articles VALUES(106,1503,"Buy the Dip","Taste the dip","2009-02-12");
+ <EOQ>
+
+INSERT INTO Articles VALUES(106,1502,"Robinhood","Get rich or die anyway","2009-02-12");
+ <EOQ>
+
+
+
+INSERT INTO Books VALUES(101,501,"Vol-1","2002-07-04","2000-03-19","Line-1Line-2");
+<EOQ>
+
+INSERT INTO Books VALUES(103,502,"Vol-7","2012-09-24","2007-10-31","Line-1 Line-2 Line-3");
+ <EOQ>
+
+INSERT INTO Books VALUES(107,503,"Part-2","2005-01-12","1999-12-01","Line-1Line-2");
+<EOQ>
+
+
+
+INSERT INTO Chapter VALUES(101,1,"Into the woods","Lorem ipsum valor");
+ <EOQ>
+
+INSERT INTO Chapter VALUES(101,2,"Into the Forest","ipsum valor");
+ <EOQ>
+
+INSERT INTO Chapter VALUES(101,3,"Into the Mountains","Fell and broken");
+ <EOQ>
+
+INSERT INTO Chapter VALUES(103,1,"Mason Power","The secret people");
+ <EOQ>
+
+INSERT INTO Chapter VALUES(103,2,"What happened that day","They are everywhere");
+ <EOQ>
+
+INSERT INTO Chapter VALUES(107,1,"The Nagas","Who are they?");
+ <EOQ>
+
+INSERT INTO Chapter VALUES(107,2,"the oath","Promise made is made");
+ <EOQ>
+
+INSERT INTO Chapter VALUES(107,3,"Vayuputras","Friends in need");
+ <EOQ>
+
+
+
+INSERT INTO Pens VALUES(1,101);
+ <EOQ>
+
+INSERT INTO Pens VALUES(11,101);
+ <EOQ>
+
+INSERT INTO Pens VALUES(1,103);
+ <EOQ>
+
+INSERT INTO Pens VALUES(11,103);
+ <EOQ>
+
+INSERT INTO Pens VALUES(1,107);
+ <EOQ>
+
+
+
+INSERT INTO Writes VALUES(1,1501,102);
+ <EOQ>
+
+INSERT INTO Writes VALUES(11,1502,102);
+ <EOQ>
+
+INSERT INTO Writes VALUES(11,1503,102);
+ <EOQ>
+
+INSERT INTO Writes VALUES(11,1501,104);
+ <EOQ>
+
+INSERT INTO Writes VALUES(1,1502,104);
+ <EOQ>
+
+INSERT INTO Writes VALUES(1,1503,104);
+ <EOQ>
+
+INSERT INTO Writes VALUES(1,1502,105);
+ <EOQ>
+
+INSERT INTO Writes VALUES(1,1503,105);
+ <EOQ>
+
+INSERT INTO Writes VALUES(11,1504,105);
+ <EOQ>
+
+INSERT INTO Writes VALUES(1,1504,106);
+ <EOQ>
+
+INSERT INTO Writes VALUES(1,1503,106);
+ <EOQ>
+
+INSERT INTO Writes VALUES(11,1502,106);
+ <EOQ>
+
+
+
+INSERT INTO Edits VALUES(2,101);
+ <EOQ>
+
+INSERT INTO Edits VALUES(2,103);
+ <EOQ>
+
+INSERT INTO Edits VALUES(9,103);
+ <EOQ>
+
+INSERT INTO Edits VALUES(3,107);
+ <EOQ>
+
+INSERT INTO Edits VALUES(2,107);
+ <EOQ>
+
+INSERT INTO Edits VALUES(9,107);
+ <EOQ>
+
+
+
+INSERT INTO Transactions VALUES(5001,"2022-01-01",10,"Credit","Cash","Distributor");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5002,"2022-02-07",100,"Credit","DebitCard","Distributor");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5003,"2022-02-11",25.5,"Credit","CreditCard","Distributor");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5004,"2022-02-27",30,"Credit","Cash","Distributor");
+ <EOQ>
+
+
+INSERT INTO Transactions VALUES(5005,"2022-01-15",12,"Debit","Cheque","Shipping Cost");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5006,"2022-01-15",2.9,"Debit","Cheque","Shipping Cost");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5007,"2022-02-15",3.33,"Debit","Cheque","Shipping Cost");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5008,"2022-02-15",0,"Debit","Cheque","Shipping Cost");
+ <EOQ>
+
+
+INSERT INTO Transactions VALUES(5009,"2022-03-01",5000,"Debit","ACH","Salary");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5010,"2022-03-01",6000,"Debit","ACH","Salary");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5011,"2022-03-01",4501,"Debit","ACH","Salary");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5012,"2022-03-01",3784,"Debit","ACH","Salary");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5013,"2022-03-01",2878,"Debit","ACH","Salary");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5014,"2022-03-01",2344,"Debit","ACH","Salary");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5015,"2022-03-01",5028,"Debit","ACH","Salary");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5016,"2022-03-01",2829,"Debit","ACH","Salary");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5017,"2022-03-01",2834,"Debit","ACH","Salary");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5018,"2022-03-01",1123,"Debit","ACH","Salary");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5019,"2022-03-01",2311,"Debit","ACH","Salary");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5021,"2022-03-01",2311,"Debit","ACH","Salary");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5022,"2021-05-01",5511,"Debit","ACH","Salary");
+ <EOQ>
+
+INSERT INTO Transactions VALUES(5020,"2022-03-01",10,"Credit","Cash","Distributor");
+ <EOQ>
+
+
+INSERT INTO Distributor VALUES(7001,8001,"Higgin Bothams",50,"Wholesale","2842 Avent Ferry","New York","Wake","Larry James",5134789920);
+ <EOQ>
+
+INSERT INTO Distributor VALUES(7002,8002,"Wolfpack Outfitters",110,"Book Store","4400 Gorman Street","Raleigh","Wake","Dan Green",5134789921);
+ <EOQ>
+
+INSERT INTO Distributor VALUES(7003,8003,"Hunt Library",89.5,"Library","3210 Falcon Ridge","Raleigh","Wake","John Paul",5134789922);
+ <EOQ>
+
+INSERT INTO Distributor VALUES(7004,8004,"Hill Lib",55,"Library","3420 Kings Ct","Cary","Wake","James Bond :)",5134789923);
+ <EOQ>
+
+
+
+INSERT INTO Orders VALUES(90005,7001,"2022-01-01",60,"2022-01-10",12);
+ <EOQ>
+
+INSERT INTO Orders VALUES(90006,7001,"2021-01-07",210,"2022-02-10",2.9);
+ <EOQ>
+
+INSERT INTO Orders VALUES(90007,7002,"2022-02-11",115,"2022-02-15",3.33);
+ <EOQ>
+
+INSERT INTO Orders VALUES(90008,7002,"2022-02-01",85,"2022-02-10",0);
+ <EOQ>
+
+
+
+INSERT INTO GetsPaid VALUES(5009,1,"Permanent");
+ <EOQ>
+
+INSERT INTO GetsPaid VALUES(5010,2,"Invited");
+ <EOQ>
+
+INSERT INTO GetsPaid VALUES(5011,3,"Permanent");
+ <EOQ>
+
+INSERT INTO GetsPaid VALUES(5012,4,"Permanent");
+ <EOQ>
+
+INSERT INTO GetsPaid VALUES(5013,5,"Permanent");
+ <EOQ>
+
+INSERT INTO GetsPaid VALUES(5014,6,"Permanent");
+ <EOQ>
+
+INSERT INTO GetsPaid VALUES(5015,7,"Permanent");
+ <EOQ>
+
+INSERT INTO GetsPaid VALUES(5016,8,"Permanent");
+ <EOQ>
+
+INSERT INTO GetsPaid VALUES(5017,9,"Permanent");
+ <EOQ>
+
+INSERT INTO GetsPaid VALUES(5018,10,"Permanent");
+ <EOQ>
+
+INSERT INTO GetsPaid VALUES(5019,11,"Invited");
+ <EOQ>
+
+INSERT INTO GetsPaid VALUES(5021,11,"Invited");
+ <EOQ>
+
+INSERT INTO GetsPaid VALUES(5022,11,"Invited");
+ <EOQ>
+
+
+
+INSERT INTO MadeBy VALUES(5001,7001);
+ <EOQ>
+
+INSERT INTO MadeBy VALUES(5002,7002);
+ <EOQ>
+
+INSERT INTO MadeBy VALUES(5003,7003);
+ <EOQ>
+
+INSERT INTO MadeBy VALUES(5004,7004);
+ <EOQ>
+
+
+
+INSERT INTO MadeFor VALUES(5005,90005);
+ <EOQ>
+
+INSERT INTO MadeFor VALUES(5006,90006);
+ <EOQ>
+
+INSERT INTO MadeFor VALUES(5007,90007);
+ <EOQ>
+
+INSERT INTO MadeFor VALUES(5008,90008);
+ <EOQ>
+
+
+
+INSERT INTO Has VALUES(101,90005,3,30);
+ <EOQ>
+
+INSERT INTO Has VALUES(102,90005,2,30);
+ <EOQ>
+
+INSERT INTO Has VALUES(101,90006,1,10);
+ <EOQ>
+
+INSERT INTO Has VALUES(103,90006,2,200);
+ <EOQ>
+
+INSERT INTO Has VALUES(103,90007,1,100);
+ <EOQ>
+
+INSERT INTO Has VALUES(102,90007,1,15);
+ <EOQ>
+
+INSERT INTO Has VALUES(101,90008,4,40);
+ <EOQ>
+
+INSERT INTO Has VALUES(102,90008,3,45);
+ <EOQ>
+

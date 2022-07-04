@@ -1,0 +1,213 @@
+<TABLE>Has</TABLE>
+<TABLE>MadeFor</TABLE>
+<TABLE>MadeBy</TABLE>
+<TABLE>GetsPaid</TABLE>
+<TABLE>Orders</TABLE>
+<TABLE>Distributor</TABLE>
+<TABLE>Transactions</TABLE>
+<TABLE>Edits</TABLE>
+<TABLE>Writes</TABLE>
+<TABLE>Pens</TABLE>
+<TABLE>Chapter</TABLE>
+<TABLE>Books</TABLE>
+<TABLE>Articles</TABLE>
+<TABLE>Issues</TABLE>
+<TABLE>Publication</TABLE>
+<TABLE>Editor</TABLE>
+<TABLE>Author</TABLE>
+<TABLE>StaffMember</TABLE>
+
+CREATE TABLE StaffMember ( 
+    ID INT,
+    SSN VARCHAR(128) UNIQUE, 
+    Name VARCHAR(128) NOT NULL,
+    Address VARCHAR(128) NOT NULL, 
+    PhoneNumber VARCHAR(16) NOT NULL, 
+    Gender VARCHAR(128) NOT NULL, 
+    Age INT NOT NULL,
+    JobTitle VARCHAR(128) NOT NULL, 
+    DOJ DATE NOT NULL,
+    PRIMARY KEY(ID) );
+    <EOQ>
+
+
+CREATE TABLE Author ( 
+    AuthorID INT, 
+    EmploymentType VARCHAR(128) NOT NULL,
+    PRIMARY KEY(AuthorID),
+    FOREIGN KEY (AuthorID) REFERENCES StaffMember(ID) );
+    <EOQ>
+
+
+CREATE TABLE Editor ( 
+    EditorID INT, 
+    EmploymentType VARCHAR(128) NOT NULL,
+    PRIMARY KEY(EditorID),
+    FOREIGN KEY (EditorID) REFERENCES StaffMember(ID) );
+    <EOQ>
+
+
+CREATE TABLE Publication ( 
+    PID INT, 
+    Title VARCHAR(128) NOT NULL,
+    Type VARCHAR(128) NOT NULL,
+    Topics VARCHAR(128) NOT NULL, 
+    CostOfEachPiece FLOAT DEFAULT 0,
+    PRIMARY KEY(PID) );
+    <EOQ>
+
+
+CREATE TABLE Issues ( 
+    PID INT, 
+    IssueNumber INT NOT NULL UNIQUE,
+    Type VARCHAR(128) NOT NULL,
+    DateOfIssue DATE NOT NULL,
+    Periodicity VARCHAR(128) NOT NULL,
+    TableOfContents VARCHAR(128) NOT NULL,
+    PRIMARY KEY(PID),
+    FOREIGN KEY(PID) REFERENCES Publication(PID) );
+    <EOQ>
+
+
+CREATE TABLE Articles ( 
+    PID INT, 
+    ArtNum INT,
+    ArticleName VARCHAR(128) NOT NULL,
+    ArticleText VARCHAR(128) NOT NULL,
+    DateOfCreation DATE NOT NULL,
+    PRIMARY KEY(PID,ArtNum),
+    FOREIGN KEY(PID) REFERENCES Issues(PID)
+    ON DELETE CASCADE);
+    <EOQ>
+
+
+CREATE TABLE Books ( 
+    PID INT, 
+    ISBN INT NOT NULL UNIQUE,
+    Edition VARCHAR(128) NOT NULL,
+    PublicationDate DATE NOT NULL,
+    DateOfCreation DATE NOT NULL,
+    TableOfContents VARCHAR(128) NOT NULL, 
+    PRIMARY KEY(PID),
+    FOREIGN KEY(PID) REFERENCES Publication(PID) );
+    <EOQ>
+
+
+CREATE TABLE Chapter ( 
+    PID INT, 
+    ChapNum INT NOT NULL,
+    ChapterName VARCHAR(128) NOT NULL,
+    Contents VARCHAR(128) NOT NULL, 
+    PRIMARY KEY(PID,ChapNum),
+    FOREIGN KEY(PID) REFERENCES Books(PID) 
+    ON DELETE CASCADE );
+    <EOQ>
+
+
+CREATE TABLE Pens ( 
+    AuthorID INT, 
+    PID INT,
+    PRIMARY KEY(AuthorID,PID),
+    FOREIGN KEY (AuthorID) REFERENCES Author(AuthorID),
+    FOREIGN KEY (PID) REFERENCES Books(PID) 
+    ON DELETE CASCADE );
+    <EOQ>
+
+
+CREATE TABLE Writes ( 
+    AuthorID INT, 
+    ArtNum INT,
+    PID INT,
+    PRIMARY KEY(AuthorID,ArtNum,PID),
+    FOREIGN KEY (AuthorID) REFERENCES Author(AuthorID),
+    FOREIGN KEY (PID, ArtNum) REFERENCES Articles(PID, ArtNum)
+    ON DELETE CASCADE );
+    <EOQ>
+
+
+CREATE TABLE Edits ( 
+    EditorID INT, 
+    PID INT,
+    PRIMARY KEY(EditorID,PID),
+    FOREIGN KEY (PID) REFERENCES Publication(PID),
+    FOREIGN KEY (EditorID) REFERENCES Editor(EditorID) );
+    <EOQ>
+
+
+
+CREATE TABLE Transactions ( 
+    TID INT, 
+    TransactionDate DATE NOT NULL,
+    Amount FLOAT DEFAULT 0,
+    DebitCredit VARCHAR(128) NOT NULL,
+    PaymentMode VARCHAR(128) NOT NULL,
+    TransactionType VARCHAR(128) NOT NULL,
+    PRIMARY KEY(TID) );
+    <EOQ>
+
+
+CREATE TABLE Distributor ( 
+    DID INT,
+    EIN INT NOT NULL UNIQUE, 
+    DName VARCHAR(128) NOT NULL,
+    OutstandingBalance FLOAT DEFAULT 0,
+    Type VARCHAR(128) NOT NULL,
+    Address VARCHAR(128) NOT NULL,
+    City VARCHAR(128) NOT NULL,
+    Location VARCHAR(128) NOT NULL,
+    POC VARCHAR(128) NOT NULL,
+    PhoneNumber VARCHAR(10) NOT NULL UNIQUE,
+    PRIMARY KEY(DID) );
+    <EOQ>
+
+
+CREATE TABLE Orders ( 
+    OrderID INT,
+	DID INT,
+    OrderDate DATE NOT NULL,
+    PriceOfOrder FLOAT DEFAULT 0, 
+    DeliveryDate DATE NOT NULL,
+    ShippingCost FLOAT DEFAULT 0,
+    PRIMARY KEY(OrderID),
+	FOREIGN KEY (DID) REFERENCES Distributor(DID) );
+    <EOQ>
+
+
+CREATE TABLE GetsPaid ( 
+    TID INT, 
+    ID INT,
+    WorkType VARCHAR(128) NOT NULL,
+    PRIMARY KEY(TID),
+    FOREIGN KEY (TID) REFERENCES Transactions(TID),
+    FOREIGN KEY (ID) REFERENCES StaffMember(ID) );
+    <EOQ>
+
+
+CREATE TABLE MadeBy ( 
+    TID INT,
+    DID INT, 
+    PRIMARY KEY(TID),
+    FOREIGN KEY (TID) REFERENCES Transactions(TID),
+    FOREIGN KEY (DID) REFERENCES Distributor(DID) );
+    <EOQ>
+
+
+CREATE TABLE MadeFor ( 
+    TID INT,
+    OrderID INT, 
+    PRIMARY KEY(TID),
+    FOREIGN KEY (TID) REFERENCES Transactions(TID),
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID) );
+    <EOQ>
+
+
+
+CREATE TABLE Has ( 
+    PID INT,
+    OrderID INT, 
+    NumberOfCopies INT DEFAULT 1,
+	PurchaseCost FLOAT DEFAULT 0,
+    PRIMARY KEY(PID,OrderID),
+    FOREIGN KEY (PID) REFERENCES Publication(PID),
+    FOREIGN KEY (OrderID) REFERENCES Orders(OrderID) );
+    <EOQ>
